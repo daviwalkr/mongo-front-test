@@ -14,11 +14,11 @@ app.get('/', (req, res) => {
     let subdomain = domain.slice(0, sdIndex);
 
     if(subdomain == 'aena'){
-        res.status(200).render('indexa', { subdomain})
+        res.status(200).send(`${subdomain}`)
     }else if(subdomain == 'davi'){
-        res.status(200).render('indexd', { subdomain})
+        res.status(200).send(`${subdomain}`)
     }else{
-        res.status(200).render('index', { subdomain})
+        res.status(200).send(`${subdomain}`)
     }
 });
 
