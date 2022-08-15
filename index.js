@@ -1,19 +1,15 @@
 const express = require('express');
-
 const app = express();
 
 app.use(express.json())
-
 app.set('view engine', 'ejs')
 
-//app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.render("index");
-    //res.sendFile('public/index.html', {root: __dirname});
+    res.send('main page')
 });
 
-app.get('/check', (req, res) => {
+app.get('/check/sub', (req, res) => {
     let domain = req.host;
     let sdIndex = req.host.indexOf(".");
 
