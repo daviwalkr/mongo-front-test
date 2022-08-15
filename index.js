@@ -8,7 +8,7 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     //apenas testando
-    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+    res.sendFile('public/index.html', {root: __dirname});
 });
 
 app.get('/check', (req, res) => {
