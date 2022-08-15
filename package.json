@@ -20,7 +20,8 @@
   "homepage": "https://github.com/Aenewsss/mongo-test-frontend#readme",
   "dependencies": {
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "now": "^21.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
