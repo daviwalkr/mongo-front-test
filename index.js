@@ -7,6 +7,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
+    //apenas testando
     res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 });
 
