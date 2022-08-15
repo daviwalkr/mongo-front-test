@@ -2,13 +2,15 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.json())
+
 app.set('view engine', 'ejs')
 
-app.use(express.static('public'))
+//app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    //apenas testando
-    res.sendFile('public/index.html', {root: __dirname});
+    res.render("index");
+    //res.sendFile('public/index.html', {root: __dirname});
 });
 
 app.get('/check', (req, res) => {
