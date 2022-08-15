@@ -4,8 +4,10 @@ const app = express();
 
 app.set('view engine', 'ejs')
 
+app.use(express.static('public'))
+
 app.get('/', (req, res) => {
-    res.send('main')
+    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
 });
 
 app.get('/check', (req, res) => {
