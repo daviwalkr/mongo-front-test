@@ -17,12 +17,10 @@ app.get('/', (req, res) => {
         mongoose.connect(process.env.MONGO_AENA)
             .then(() => res.send(`connect to mongodb in ${process.env.MONGO_AENA}`))
             .catch((e) => res.send(`Fail to connect ${e}`))
-        res.status(200).send(`${subdomain}`)
     } else if (subdomain == 'davi') {
         mongoose.connect(process.env.MONGO_DAVI)
             .then(() => res.send(`connect to mongodb in ${process.env.MONGO_DAVI}`))
             .catch((e) => res.send(`Fail to connect ${e}`))
-        res.status(200).send(`${subdomain}`)
     } else {
         res.status(200).send(`${subdomain}`)
     }
