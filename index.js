@@ -5,6 +5,10 @@ const app = express();
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
+    res.send('main')
+});
+
+app.get('/check', (req, res) => {
     let domain = req.host;
     let sdIndex = req.host.indexOf(".");
 
@@ -17,7 +21,7 @@ app.get('/', (req, res) => {
     }else{
         res.status(200).render('index', { subdomain})
     }
-    
 });
+
 
 app.listen(3000, () => console.log("Server running on port 3000"))
