@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+require('dotenv').config()
 
 app.use(express.json())
 app.set('view engine', 'ejs')
@@ -25,4 +26,4 @@ app.get('/check/sub', (req, res) => {
 });
 
 
-app.listen(3000, () => console.log("Server running on port 3000"))
+app.listen(3000 || process.env.PORT, () => console.log("Server running on port 3000"))
